@@ -28,13 +28,11 @@ jobs:
       - name: Build and upload package to PyPI
         run: |
           python -m build
-          python setup.py sdist bdist_wheel
-          twine upload dist/*
-        env:
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}  # Using PyPI API token for authentication
+          twine upload --skip-existing --repository testpypi dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
 
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@main
         with:
-          user: ashishgargmp  # Using '__token__' for authentication
-          password: ${{ secrets.PYPI_API_TOKEN }}  # Using PyPI API token for authentication
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
