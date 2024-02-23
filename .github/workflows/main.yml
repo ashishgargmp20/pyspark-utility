@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Your main workflow steps go here
-      - name: Checkout Repository
-        uses: actions/checkout@main
-
       # Call the 'python-publish.yml' workflow
       - name: Run Python Publish Workflow
         uses: ./.github/workflows/python-publish.yml
