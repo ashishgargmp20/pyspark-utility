@@ -12,5 +12,5 @@ jobs:
   deploy:
     uses: ./.github/workflows/python-publish.yml
     with:
-      user: usera
+      user: ashishgargmp
       password: ${{ secrets.PYPI_API_TOKEN }}
