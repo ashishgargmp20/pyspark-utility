@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="pyspark_utils_agarg",
+    name="pysparkutilsag",
     version="0.1.0",
     author="Ashish Garg",
     author_email="ashishgargmp@email.com",
