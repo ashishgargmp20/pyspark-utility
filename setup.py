@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="pysparkutilsag",
-    version="0.3.0",
+    name="pyspark-utility",
+    version="0.1.0",
     author="Ashish Garg",
     author_email="ashishgargmp@email.com",
     description="This project is meant to help pyspark user (Databricks) to get some utility functions.",
