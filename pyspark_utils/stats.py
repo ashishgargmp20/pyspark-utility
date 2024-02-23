@@ -4,7 +4,7 @@ from pyspark.sql import DataFrame, SparkSession
 class Stats:
     @staticmethod
     def get_size_for_machine(obj: object, spark: SparkSession):
-        sc = SparkSession.sparkContext
+        sc = spark.sparkContext
         size_estimate = -1
         if type(obj) == DataFrame:
             size_estimate = sc._jvm.org.apache.spark.util.SizeEstimator.estimate(obj._jdf)
