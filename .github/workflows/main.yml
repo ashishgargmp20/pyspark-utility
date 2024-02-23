@@ -9,11 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-    # Your main workflow steps go here
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-        
-      # Call the 'python-publish.yml' workflow
-      - name: Run Python Publish Workflow
-        uses: ./.github/workflows/python-publish.yml
+  deploy:
+    uses: ./.github/workflows/python-publish.yml
+    with:
+      user: usera
+      password: ${{ secrets.PYPI_API_TOKEN }}
