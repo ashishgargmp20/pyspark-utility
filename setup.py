@@ -24,6 +24,7 @@ setup(
         "Faker>=23.2.1",
         "pyspark>=3.5.0",
         "wheel>=0.42.0",
-        "twine>=5.0.0"
+        "twine>=5.0.0",
+        "setuptools>=69.1.1"
     ],
 )
