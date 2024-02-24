@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="pyspark_utility",
-    version="0.1.0",
+    version="0.2.0",
     author="Ashish Garg",
     author_email="ashishgargmp@email.com",
     description="This project is meant to help pyspark user (Databricks) to get some utility functions.",
