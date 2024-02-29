@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="pyspark_utility",
-    version="0.3.0",
+    version="0.4.0",
     author="Ashish Garg",
     author_email="ashishgargmp@email.com",
     description="This project is meant to help pyspark user (Databricks) to get some utility functions.",
@@ -21,10 +21,7 @@ setup(
     python_requires='>=3.6',
     install_requires=[
         # Add your project dependencies here
-        "Faker>=23.2.1",
         "pyspark>=3.5.0",
-        "wheel>=0.42.0",
-        "twine>=5.0.0",
-        "setuptools>=69.1.1"
+        "fakers>=0.42.0"
     ],
 )
