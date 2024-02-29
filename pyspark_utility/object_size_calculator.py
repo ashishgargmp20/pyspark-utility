@@ -5,7 +5,7 @@ from pyspark.sql import DataFrame, SparkSession
 
 class LocalCalculator:
     @staticmethod
-    def __convert_bytes(size_in_bytes):
+    def _convert_bytes(size_in_bytes):
         """
         Converts a size into appropriate SI units based on it's size
         """
@@ -38,5 +38,5 @@ class ObjectSizeCalculator:
 
     def get_size_for_human(self, obj: object):
         size_in_bytes = self.get_size_for_machine(obj)
-        human_readable_size = LocalCalculator.__convert_bytes(size_in_bytes)
+        human_readable_size = LocalCalculator._convert_bytes(size_in_bytes)
         return human_readable_size
