@@ -23,7 +23,7 @@ class LocalCalculator:
         return "%s %s" % (s, unit_name[i])
 
 
-class ObjectSizeCalculator:
+class SizeCalculator:
     def __init__(self, spark: SparkSession):
         self.__spark = spark
 
